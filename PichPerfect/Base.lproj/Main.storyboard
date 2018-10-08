@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,23 +20,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOh-ip-WHf">
-                                <rect key="frame" x="136.5" y="419" width="102" height="21"/>
+                                <rect key="frame" x="136.5" y="379" width="102" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="oJX-KU-YCH"/>
+                                    <constraint firstAttribute="height" constant="20" id="oJX-KU-YCH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb8-aN-QYY">
-                                <rect key="frame" x="110.5" y="256" width="155" height="155"/>
+                                <rect key="frame" x="110.5" y="216" width="155" height="155"/>
                                 <state key="normal" image="recordButton"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="elw-1O-fRq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68b-cK-sL8">
-                                <rect key="frame" x="156" y="463" width="64" height="64"/>
+                                <rect key="frame" x="156" y="423" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="5pZ-me-1BO"/>
                                     <constraint firstAttribute="height" constant="64" id="eTw-PU-tRW"/>
@@ -48,8 +49,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gb8-aN-QYY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2mL-3e-Gz6"/>
+                            <constraint firstItem="gb8-aN-QYY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="2mL-3e-Gz6"/>
                             <constraint firstItem="HOh-ip-WHf" firstAttribute="top" secondItem="gb8-aN-QYY" secondAttribute="bottom" constant="8" id="3jz-nu-TKS"/>
+                            <constraint firstItem="HOh-ip-WHf" firstAttribute="width" secondItem="gb8-aN-QYY" secondAttribute="height" multiplier="102:155" id="Im5-Oi-6JK"/>
+                            <constraint firstItem="68b-cK-sL8" firstAttribute="width" secondItem="HOh-ip-WHf" secondAttribute="height" multiplier="16:5" id="KLD-fR-GVM"/>
                             <constraint firstItem="68b-cK-sL8" firstAttribute="top" secondItem="gb8-aN-QYY" secondAttribute="bottom" constant="52" id="MHh-Nw-2FN"/>
                             <constraint firstItem="68b-cK-sL8" firstAttribute="centerX" secondItem="gb8-aN-QYY" secondAttribute="centerX" id="Qcg-ri-OKA"/>
                             <constraint firstItem="HOh-ip-WHf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jSB-xx-l6h"/>
